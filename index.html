@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <!-- Metadatos -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Iconos -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Título -->
+  <title>Voluntariados</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Encabezado -->
+  <div class="encabezado">
+    <a class="btn-intro" href="#" onclick="irAIntro(); return false;">Ver página de introducción</a>
+    <h1>Voluntariados disponibles</h1>
+  </div>
+
+  <!-- Contador total -->
+  <p><strong>Total registrados:</strong> <span id="totalCount">0</span></p>
+
+  <!-- Tipos de voluntariado (cards informativas) -->
+  <h2 class="titulo-voluntariados">Tipos de voluntariado:</h2>
+  <section class="voluntariado-tipos">
+    <div class="card-container">
+
+      <div class="card" data-key="social" role="button" tabindex="0" aria-haspopup="dialog" aria-controls="card-modal">
+        <i class="fas fa-hand-holding-heart"></i>
+        <h3>Social</h3>
+        <p>Apoyo a comunidades vulnerables.</p>
+      </div>
+
+      <div class="card" data-key="ambiental" role="button" tabindex="0" aria-haspopup="dialog" aria-controls="card-modal">
+        <i class="fas fa-leaf"></i>
+        <h3>Ambiental</h3>
+        <p>Protección del medio ambiente.</p>
+      </div>
+
+      <div class="card" data-key="educativo" role="button" tabindex="0" aria-haspopup="dialog" aria-controls="card-modal">
+        <i class="fas fa-book"></i>
+        <h3>Educativo</h3>
+        <p>Apoyo escolar, alfabetización, formación.</p>
+      </div>
+
+      <div class="card" data-key="salud" role="button" tabindex="0" aria-haspopup="dialog" aria-controls="card-modal">
+        <i class="fas fa-notes-medical"></i>
+        <h3>Salud</h3>
+        <p>Actividades de promoción y prevención.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Formulario ÚNICO con selector -->
+  <div class="voluntariado">
+    <h2 id="eventoTitulo">Recolección de alimentos</h2>
+    <p><strong>Fecha:</strong> <span id="eventoFecha">10/08/2025</span></p>
+    <p><strong> Lugar:</strong> <span id="eventoLugar">Parque del Poblado</span></p>
+
+    <form id="formRegistro" onsubmit="registrar(event)">
+      <label for="selectorEvento" class="sr-only">Selecciona un evento</label>
+      <select id="selectorEvento" aria-label="Selecciona un evento">
+        <option value="recoleccion">Recolección de alimentos</option>
+        <option value="limpieza">Limpieza de la quebrada ayura</option>
+        <option value="cocinando">Cocinando por Medellín</option>
+        <option value="adopcion">Jornada de adopción de mascotas</option>
+      </select>
+
+      <input type="text" name="nombre" placeholder="Tu nombre" required>
+      <input type="email" name="email" placeholder="Tu correo" required>
+      <button type="submit">Registrarme</button>
+    </form>
+
+    <p><strong>Registrados aquí:</strong> <span class="count" id="eventoCount">0</span></p>
+  </div>
+
+<!--
+   <p class="boton-regresar" style="text-align:center; margin:24px 0;">
+    <a class="btn-intro" href="#" onclick="irAIntro(); return false;">Regresar a la intro</a>
+  </p> -->
+
+  <!-- Modal reutilizable -->
+  <div id="card-overlay" class="modal-overlay" hidden></div>
+  <div id="card-modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" hidden>
+    <button id="modal-close" class="modal-close" aria-label="Cerrar ventana">
+      <i class="fa-solid fa-xmark"></i>
+    </button>
+    <h3 id="modal-title"></h3>
+    <div id="modal-body" class="modal-body"></div>
+    <div class="modal-actions">
+      <button id="modal-ok" class="btn-ghost" type="button">Cerrar</button>
+    </div>
+  </div>
+
+  <!-- JS -->
+  <script src="index.js"></script>
+
+   <!-- Footer -->
+  <footer class="foot">
+    <small>&copy; 2025 Voluntariados. Todos los derechos reservados.</small>
+  </footer>
+</body>
+</html>
+</body>
+</html>
