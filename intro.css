@@ -43,11 +43,24 @@ body{
 .foot{ text-align:center; color:var(--muted); padding:8px 16px 24px; }
 
 .imagen-voluntariado {
-  width: 200px;      /* Puedes ajustar este valor */
-  height: 200px;     /* Altura fija para uniformidad */
-  object-fit: cover; /* Recorta la imagen para que llene el área sin deformarse */
-  margin: 5px;       /* Espacio entre las imágenes */
-  border-radius: 10px; /* (Opcional) esquinas redondeadas */
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  margin: 5px;
+  border-radius: 10px; 
 }
+
+  p {
+      font-size: 20px;
+      font-weight: bold;
+      color: white;
+      padding: 20px 40px;
+      border-radius: 15px;
+      text-align: center;
+      box-shadow: 0 8px 10px rgba(4, 37, 226, 0.347);
+      transition: transform 0.5s ease;
+      width: 1480px;
+      height: auto;
+    }
 
  
